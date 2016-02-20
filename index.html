@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>New Game</title>
+        <style type="text/css">
+            body{
+                margin: 0;
+                padding: 0
+            }
+        </style>
+        <script type="text/javascript">
+            var TheGame = {};
+            </script>
+        <script src="phaser.min.js"></script>
+        <script src="gyro.min.js"></script>
+    </head>
+    <body>
+<script type="text/javascript">
+	
+TheGame.PlayState = function(game) {
+};
+
+TheGame.PlayState.prototype = {
+	preload: function () {
+	},
+				
+	create: function () {
+	},
+	
+	update: function() {
+	}
+};
+
+window.onload = function() {
+	var game = new Phaser.Game(980, 1250, Phaser.AUTO);
+	
+	game.state.add('Play', TheGame.PlayState);
+	
+	game.state.start('Play');
+};
+
+</script>
+    </body>
+</html>
