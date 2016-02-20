@@ -10,7 +10,7 @@
             }
         </style>
         <script type="text/javascript">
-            var TheGame = {};
+            var GameStates = {};
             </script>
         <script src="phaser.min.js"></script>
         <script src="gyro.min.js"></script>
@@ -18,10 +18,10 @@
     <body>
 <script type="text/javascript">
 	
-TheGame.PlayState = function(game) {
+GameStates.PlayState = function(game) {
 };
 
-TheGame.PlayState.prototype = {
+GameStates.PlayState.prototype = {
 	preload: function () {
 	},
 				
@@ -33,11 +33,11 @@ TheGame.PlayState.prototype = {
 };
 
 window.onload = function() {
-	var game = new Phaser.Game(980, 1250, Phaser.AUTO);
+	var TheGame = new Phaser.Game("100", "100", Phaser.AUTO);
 	
-	game.state.add('Play', TheGame.PlayState);
+	TheGame.state.add('Play', GameStates.PlayState);
 	
-	game.state.start('Play');
+	TheGame.state.start('Play');
 };
 
 </script>
